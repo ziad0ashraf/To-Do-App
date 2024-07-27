@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/animate.css">
+    <link rel="stylesheet" href="style/all.min.css.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body> 
+
+        <div class="container wow bounceInLeft w-50 my-5 py-4 text-center text-white rounded-5 overflow-hidden">
+            <span id="element" class="h1"></span>
+            <div class=" my-4">
+                <div class="d-flex gap-2">
+                    <input id="todoInput" type="text" class="form-control" placeholder="Put your Tasks">
+                    <button id="todoBtn" class="btn btn-outline-primary">Submit</button>    
+                </div>
+                <div class="alert alert-danger w-50 m-auto my-2 fw-bolder">The input field for tasks is empty.</div>
+            </div>
+            <h2 class="full">All Tasks <i class="fa-solid fa-list fa-lg" style="color: #ffffff;"></i></h2>
+            <h2 class="empty">No Tasks Documented !</h2>
+            <div id="loader" class="d-flex justify-content-center my-4">
+                <div class="typewriter">
+                    <div class="slide"><i></i></div>
+                    <div class="paper"></div>
+                    <div class="keyboard"></div>
+                </div>    
+            </div>
+            <div id="demo" class="tasks overflow-hidden"></div>
+        </div>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+            strings: ["To-do App", "Remind what you want To Do"],
+            typeSpeed: 100,
+            backSpeed:100,
+            loop:true
+          });
+        </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
